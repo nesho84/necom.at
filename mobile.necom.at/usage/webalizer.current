@@ -1,0 +1,219 @@
+# Webalizer V2.23-08 Incremental Data - 06/28/2015 12:56:41
+2015 6 28 12 56 41
+62 62 16 10 8 7 344283 32 20 0
+1 1 9 6 28
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+3 3 5590 2 1 1
+1 1 1607 1 1 1
+1 1 1607 1 1 1
+3 3 5590 3 1 1
+1 1 1607 1 1 1
+0 0 0 0 0 0
+7 7 58969 1 3 1
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+3 3 5590 2 1 1
+0 0 0 0 0 0
+1 1 1607 1 1 1
+0 0 0 0 0 0
+1 1 1793 1 1 1
+12 12 67886 3 6 2
+0 0 0 0 0 0
+16 16 120668 2 8 2
+9 9 65341 4 3 3
+2 2 3214 1 2 2
+1 1 1607 1 1 1
+1 1 1607 1 1 1
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0
+1 1 4409 1
+3 3 5590 1
+2 2 3214 2
+1 1 1607 1
+0 0 0 0
+3 3 5590 1
+2 2 3983 0
+0 0 0 0
+1 1 1607 1
+1 1 1607 1
+5 5 55342 1
+1 1 1607 1
+1 1 1607 1
+1 1 1793 1
+0 0 0 0
+8 8 60390 4
+9 9 61885 5
+0 0 0 0
+3 3 5590 1
+3 3 5590 1
+9 9 62296 5
+0 0 0 0
+8 8 60576 4
+0
+0
+0
+62
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# -urls- 
+/fonts/fontawesome-webfont.woff
+0 5 0 146900 0 0
+/services
+0 2 0 3296 0 0
+/kontakt
+0 1 0 2020 0 0
+/mycss.css
+1 10 0 7150 0 0
+/fonts/fonts.css
+1 10 0 32680 0 0
+/
+0 22 0 38156 19 5
+/uns
+0 1 0 1906 0 0
+/fonts/fontawesome-social-webfont.woff
+0 5 0 101860 0 0
+/referenzen
+0 5 0 8965 1 1
+/suchen
+0 1 0 1350 0 0
+# End Of Table - urls
+# -sites- (monthly)
+crawl-66-249-79-149.googlebot.com
+0 1 1 3268 0 0
+-
+crawl-66-249-73-199.googlebot.com
+0 1 1 715 0 0
+-
+212095007073.public.telering.at
+0 1 1 1607 1 1435179249
+/
+crawl-66-249-64-140.googlebot.com
+0 3 3 5590 1 1433770750
+/
+crawl-66-249-78-230.googlebot.com
+0 5 5 9696 4 1435378115
+/
+adsl-84-227-87-21.adslplus.ch
+0 7 7 58969 1 1434152785
+/
+crawl-66-249-73-183.googlebot.com
+0 3 3 6482 2 1435496201
+/
+crawl-66-249-78-223.googlebot.com
+0 5 5 7912 2 1433879345
+/
+crawl-66-249-67-79.googlebot.com
+0 1 1 1607 1 1434736090
+/
+crawl-66-249-64-139.googlebot.com
+0 1 1 1607 1 1435248922
+/
+089144194034.atnat0003.highway.a1.net
+0 9 9 62296 1 1435008431
+/referenzen
+212095007020.public.telering.at
+0 15 15 119061 1 1435166814
+/referenzen
+193-83-129-49.adsl.highway.telekom.at
+0 5 5 55342 1 1435231723
+/
+crawl-66-249-64-145.googlebot.com
+0 1 1 1607 1 1433721173
+/
+cl-78-158-11-226.fastlink.lt
+0 1 1 4409 1 1435197176
+/
+crawl-66-249-78-216.googlebot.com
+0 3 3 4115 2 1434943995
+/
+# End Of Table - sites (monthly)
+# -sites- (daily)
+crawl-66-249-73-183.googlebot.com
+0 1 1 1607 1 1435496201
+/
+# End Of Table - sites (daily)
+# -referrers- 
+http://mobile.necom.at/fonts/fonts.css
+1 6
+http://mobile.necom.at/
+1 21
+http://umr.at/partnerlink/
+0 2
+- (Direct Request)
+0 27
+http://m.facebook.com
+0 2
+http://mobile.necom.at/services
+1 1
+http://mobile.necom.at/referenzen
+1 2
+http://www.necom.at/
+0 1
+# End Of Table - referrers
+# -agents- 
+Spider: Googlebot
+2 12
+Mozilla/5.0 (Linux; Android 4.4.2; 6043D Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.93 Mobile Safa
+0 5
+Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F70 Safari
+1 9
+Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
+1 12
+Lynx/2.8.5rel.1 libwww-FM/2.15FC SSL-MM/1.4.1c OpenSSL/0.9.7e-dev
+0 1
+Mozilla/5.0 (iPhone; CPU iPhone OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5376e Safa
+0 12
+Mozilla/5.0 (Linux; Android 5.0; SM-N9005 Build/LRX21V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/43.0.2357.93 Mobile Saf
+0 16
+Browser: Safari
+2 9
+Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12F70 [FBAN/FBIOS;FBAV/3
+0 7
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+# End Of Table - usernames

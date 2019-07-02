@@ -1,0 +1,810 @@
+	html, body
+	{
+		height: 100%;
+	}
+	
+	body
+	{
+		margin: 0px;
+		padding: 0px;
+		background: #FFF url(../images/subtle_dots.png) repeat;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 12pt;
+		font-weight: 300;
+		color: #000000;
+	}
+	
+	
+	h1, h2, h3
+	{
+		margin: 0;
+		padding: 0;
+	}
+	
+	p, ol, ul
+	{
+		margin-top: 0;
+	}
+	
+	ol, ul
+	{
+		padding: 0;
+		list-style: none;
+	}
+	
+	p
+	{
+		line-height: 180%;
+	}
+	
+	strong
+	{
+	}
+	
+	a
+	{
+		color: #0000FF;
+	}
+	
+	a:hover
+	{
+		text-decoration: none;
+	}
+	
+	@font-face
+	{
+	font-family: 'FontAwesome';
+	src: url('../fonts/fontawesome-webfont.eot?v=3.0.1');
+	src: url('../fonts/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
+	     url('../fonts/fontawesome-webfont.woff?v=3.0.1') format('woff'),
+	     url('../fonts/fontawesome-webfont.ttf?v=3.0.1') format('truetype'),
+	     url('../fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+	
+/*********************************************************************************/
+/* Image Style                                                                   */
+/*********************************************************************************/
+
+	.image
+	{
+		display: inline-block;
+	}
+	
+	.image img
+	{
+		display: block;
+		width: 100%;
+	}
+	
+	.image-full
+	{
+		display: block;
+		width: 100%;
+		margin: 0 0 2em 0;
+	}
+	
+	.image-left
+	{
+		float: left;
+		margin: 0 2em 2em 0;
+	}
+	
+	.image-centered
+	{
+		display: block;
+		margin: 0 0 2em 0;
+	}
+	
+	.image-centered img
+	{
+		margin: 0 auto;
+		width: auto;
+	}
+
+/*********************************************************************************/
+/* List Styles                                                                   */
+/*********************************************************************************/
+
+	ul.style1
+	{
+		margin: 0;
+		padding: 2em 0 0 0;
+	}
+
+	ul.style1 li
+	{
+		float: left;
+		display: inline-block;
+		padding: 0px 0px 0px 20px;
+	}
+	
+	ul.style1 li:first-child
+	{
+		padding-left: 0px;
+	}
+	
+	ul.style3
+	{
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		list-style: none;
+		color: #6c6c6c
+	}
+	
+	ul.style3 li
+	{
+		overflow: hidden;
+		display: block;
+		padding: 0.8em 0em 0em 0em;
+		margin: 0 0 1.3em 0;
+		border-top: 1px solid #D1CFCE;
+	}
+	
+	ul.style3 li:first-child
+	{
+		padding-top: 0;
+		border-top: none;
+	}
+	
+	ul.style3 p
+	{
+		margin: 0;
+	}
+	
+	ul.style3 a
+	{
+		display: block;
+		text-decoration: none;
+		color: #2D2D2D;
+	}
+	
+	ul.style3 a:hover
+	{
+		text-decoration: underline;
+	}
+	
+	ul.style3 h3
+	{
+		padding: 15px 0em 5px 0em;
+		text-transform: uppercase;
+		font-size: 1.1em;
+		font-weight: 700;
+		color: #454445;
+	}
+	
+	ul.style3 .first
+	{
+		padding-top: 0;
+		background: none;
+	}
+	
+	ul.style3 .date
+	{
+		float: left;
+		position: relative;
+		width: 60px;
+		height: 50px;
+		margin: 10px 1.5em 0em 0em;
+		padding: 10px 0em 0em 0em;
+		background: #0173B2;
+		box-shadow: 0px 0px 0px 5px rgba(255,255,255,0.1);
+		line-height: normal;
+		text-align: center;
+		text-transform: uppercase;
+		text-shadow: 0px 1px 0px rgba(0,0,0,.2);
+		font-size: 0.8em;
+		font-weight: 400;
+		color: #FFF;
+	}
+	
+	ul.style3 .date:after
+	{
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 6px;
+		background: url(../images/bg01.png) repeat;
+	}
+	
+	ul.style3 .date b
+	{
+		margin: 0;
+		padding: 0;
+		display: block;
+		font-size: 1.8em;
+		font-weight: 400;
+		color: #FFFFFF;
+	}
+	
+	ul.style3 .date a
+	{
+		color: #FFFFFF !important;
+	}
+	
+	ul.style3 .date a:hover
+	{
+		text-decoration: none;
+	}
+
+
+/*********************************************************************************/
+/* Social Icon Styles                                                            */
+/*********************************************************************************/
+
+	ul.contact
+	{
+		overflow:  hidden;
+		margin: 0em 0 3em 0;
+		padding-top: 1em;
+		text-align: center;
+	}
+	
+	ul.contact li
+	{
+		display: inline-block;
+		padding: 0em 0.30em;
+		font-size: 1em;
+	}
+	
+	ul.contact li span
+	{
+		display: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	ul.contact li a
+	{
+		color: #FFF;
+	}
+	
+	ul.contact li a:before
+	{
+		display: inline-block;
+		background: #fff;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		color: #3881DF;
+		border: 1px solid #6699cc;
+	}
+
+/*********************************************************************************/
+/* Button Style                                                                  */
+/*********************************************************************************/
+
+	.button
+	{
+		width: 294px;
+		display: inline-block;
+		padding: 1em 2em 1em 2em;
+		background: #b8b8b8;
+		letter-spacing: 0.20em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 0.90em;
+		color: #FFF;
+		position: absolute;
+		border-radius: 5px;
+	}
+	.button:hover
+	{
+	background: #00cc66;
+	}
+	
+		.button_right
+	{
+		width: 294px;
+		display: inline-block;
+		padding: 1em 1em 1em 1em;
+		margin-left: 450px;
+		background: #b8b8b8;
+		letter-spacing: 0.20em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 0.90em;
+		text-align: center;
+		color: #FFF;
+		border-radius: 5px;
+	}
+	.button_right:hover
+	{
+	background: #00cc66;
+	}
+	
+	.button:before
+	{
+	}
+		
+/*********************************************************************************/
+/* 4-column                                                                      */
+/*********************************************************************************/
+
+	.box1,
+	.box2,
+	.box3,
+	.box4
+	{
+		width: 235px;
+	}
+	
+	.box1,
+	.box2,
+	.box3,
+	{
+		float: left;
+		margin-right: 20px;
+	}
+	
+	.box4
+	{
+		float: right;
+	}
+
+
+/*********************************************************************************/
+/* 2-column                                                                      */
+/*********************************************************************************/
+
+	.tbox1,
+	.tbox2
+	{
+		width: 575px;
+	}
+	
+	.tbox1
+	{
+		float: left;
+	}
+
+	.tbox2
+	{
+		float: right;
+	}
+
+/*********************************************************************************/
+/* Page - Main Content                                                           */
+/*********************************************************************************/
+	
+	#container {
+		min-width: 1200px;
+		max-width: 1260px;
+		margin: 0px auto;
+	}
+	#container #container_inside {
+		max-width: 1199px;
+		margin: 0 auto;
+		border-right: 2px solid #ccc;
+		border-left: 2px solid #ccc;
+	}
+
+	#clear {
+		clear: both;
+	}
+	
+	#page-wrapper
+	{
+		min-width: 1099px;
+		max-width: 1260px;
+		padding: 5px;
+		margin-bottom: 1em;
+		border: 0px solid rgba(0,0,0,0.08);
+	}
+
+	#page-wrapper-inside
+	{
+		border: 0px solid #000;
+	}
+
+	#page-wrapper-inside .title
+	{
+		margin-bottom: 3em;
+		text-align: center;
+	}
+	
+	#page-wrapper-inside h3
+	{
+		margin-bottom: 1em;
+		font-size: 1.4em;
+		font-weight: 600;
+		color: rgba(0,0,0,.8);
+	}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header-wrapper
+	{
+	background: #3b5998;
+	}
+
+	#header
+	{
+		background: #fff;
+	}
+
+/*********************************************************************************/
+/* Logo - necom                                                                  */
+/*********************************************************************************/
+
+	#logo
+	{
+		border: 0px solid yellow;
+		position: absolute;
+		margin-top: -40px;
+		left: 1em;
+	}
+	
+	#logo h1
+	{
+		
+	}
+	
+	#logo img
+	{
+	width: 245px;
+	height: 83px;
+	border: 0;
+	}
+	
+	#logo a
+	{
+		text-decoration: none;
+		color: #0173B2;
+	}
+	
+	#logo p
+	{
+		position: absolute;
+		margin-left: 2px;
+		top: 5.1em;
+		color: #fff;
+		font-weight: 600;
+		font-size: 12px;
+		font-style: italic;
+		}
+
+/*********************************************************************************/
+/* Menu                                                                          */
+/*********************************************************************************/
+
+	#menu
+	{
+		position: absolute;
+		top: 1.4em;
+		right: 0;
+	}
+	
+	#menu ul
+	{
+		display: inline-block;
+	}
+	
+	#menu li
+	{
+		width: 145px;
+		border-top: 2px solid #fff;
+		margin-right: 10px;
+		padding: 20px 10px 0px 10px;
+		display: block;
+		float: left;
+		text-align: center;
+	}
+	
+	#menu li:hover
+	{
+		border-top: 5px solid #fff;
+	}
+	
+	#menu li a, #menu li span
+	{
+		padding: 1em 2em;
+		text-transform: uppercase; 
+		text-decoration: none;
+		font-size: 17px;
+		font-weight: 600;
+		color: #fff;
+	}
+	
+	#menu li:hover a, #menu li.active a, #menu li.active span
+	{
+	}
+	
+	#menu a:hover
+	{
+		text-decoration: none;
+		font-weight: bold;
+	}
+	
+	#menu .current_page_item a
+	{
+	}
+	
+	#menu .icon
+	{
+	}
+
+/*********************************************************************************/
+/* First Banner                                                                        */
+/*********************************************************************************/
+
+	#first_banner-wrapper
+	{
+		min-width: 1099px;
+		max-width: 1260px;
+		padding: 0px 0em 3em 0em;
+		margin-top: -3px;
+		border: 0px solid red;
+		/*background: url(images/bg01.jpg) no-repeat center top;*/
+	}
+	
+	#first_banner .title
+	{
+		margin-bottom: 1em;
+		text-align: center;
+	}
+	
+	#first_banner h3
+	{
+		margin-top: 3em;
+		font-size: 1.0em;
+		font-weight: 600;
+		text-align: center;
+		color: rgba(0,0,0,.8);
+	}
+
+	#first_banner .button
+	{
+		margin-top: 1em;
+	}
+	
+	.boxA1,
+	.boxB1,
+	.boxC1
+	{	
+		width: 250px;
+		border: 0px solid #cccfff;
+		border-radius: 5px;
+		float: left;
+		margin-left: 10px;
+		margin-right: 48px;
+	}
+	.boxD1
+	{	
+		width: 250px;
+		border: 0px solid #cccfff;
+		border-radius: 5px;
+		float: right;
+		margin-right: 10px;
+	}
+	
+	.boxA1 img, 
+	.boxB1 img,
+	.boxC1 img,
+	.boxD1 img
+	{
+		margin: 0px 0px -52px 0px;
+		border-radius: 5px;
+		width: 51px;
+		height: 50px;
+	}
+	
+	.boxA1 p, 
+	.boxB1 p,
+	.boxC1 p,
+	.boxD1 p
+	{
+		color: #999;
+		text-align: center;
+		font-size: 0.9em;
+	}
+	
+/*********************************************************************************/
+/* Second Banner                                                                        */
+/*********************************************************************************/
+
+	#second_banner-wrapper
+	{
+		border: 0px solid red;
+		min-width: 1099px;
+		max-width: 1260px;
+		padding: 0em 0em 25em 0em;
+		/*background: url(images/bg01.jpg) no-repeat center top;*/
+	}
+	
+	#second_banner .title
+	{
+		margin-bottom: 3em;
+		text-align: center;
+	}
+	
+	#second_banner h3
+	{
+		margin-bottom: 1em;
+		font-size: 1.4em;
+		font-weight: 600;
+		color: rgba(0,0,0,.8);
+	}
+
+	#second_banner .button
+	{
+		margin-top: 1em;
+	}
+	
+	.boxA,
+	.boxB
+	{
+		width: 350px;
+		border: 1px solid #d8d8d8;
+		border-radius: 5px;
+		margin-left: 10px;
+		float: left;
+	}
+	
+	.boxB
+	{
+		margin-left: 4em;
+	}
+	
+	.boxC
+	{
+		width: 350px;
+		border: 1px solid #d8d8d8;
+		border-radius: 5px;
+		margin-right: 10px;
+		float: right;
+	}
+	
+	.boxA img, 
+	.boxB img,
+	.boxC img
+	{
+		width: 349px;
+		height: 300px;
+		border-radius: 5px;
+	}
+	.boxA div, .boxB div, .boxC div
+	{
+		position: absolute;
+		text-align: center;
+		margin-left: -1px;
+		margin-top: -0.3em;
+	}
+
+
+
+/*********************************************************************************/
+/* Footer & Copyright                                                            */
+/*********************************************************************************/
+
+	#footer-wrapper
+	{
+		overflow: hidden;
+		background: rgba(0,0,0,.05);
+	}
+	#footer
+	{
+	}
+		
+	#copyright
+	{
+		background: #68a3ef;
+		background-image: -moz-linear-gradient(top, #73a8f1, #3b5998);
+		background-image: -ms-linear-gradient(top, #73a8f1, #3b5998);
+		background-image: -o-linear-gradient(top, #73a8f1, #3b5998);
+		background-image: -webkit-gradient(linear, center top, center bottom, from(#73a8f1), to(#3b5998));
+		background-image: -webkit-linear-gradient(top, #73a8f1, #3b5998);
+		background-image: linear-gradient(top, #73a8f1, #3b5998);
+		overflow: hidden;
+		padding: 1em 0em;
+		border-top: 2px solid #bbb;
+	}
+	
+	#copyright p
+	{
+		letter-spacing: 0.20em;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 0.80em;
+		font-weight: 500;
+		color: #fff;
+	}
+	
+	#copyright a
+	{
+		text-decoration: none;
+		color: #fff;
+	}
+
+	#line 
+	{
+		margin-top: 1em;
+		border-top: 0.2em dotted #d8d8d8;
+		margin-left: 0.8em;
+		margin-right: 0.8em;
+	}
+	
+	.page_title 
+	{
+		float: left;
+		width: 250px;
+		height: 600px;
+		padding: 10px;
+		text-align: center;
+		border-right: 1px solid #ccc;
+		margin: auto;
+	}
+	
+	.page_title h1 
+	{
+		color: #3b5998;
+	}
+	
+	.page_content_all
+	{
+		vertical-align: middle;
+		margin: auto;
+		width: 1135px;
+		height: 800px;
+		padding: 10px;
+		background: #fff;
+		border: 0px solid #bbb;
+		background: #FFF url(../images/subtle_dots.png) repeat;
+	}
+	
+	.page_content_full
+	{
+		vertical-align: middle;
+		float: left;
+		width: 885px;
+		height: 600px;
+		padding: 10px;
+		background: #fff;
+		border-right: 0px solid #bbb;
+		border-top: 0px solid #bbb;
+		border-bottom: 0px solid #bbb;
+		margin: auto;
+		background: #FFF url(../images/subtle_dots.png) repeat;
+	}
+	
+	.page_content1
+	{
+		vertical-align: middle;
+		float: left;
+		width: 315px;
+		height: 600px;
+		padding: 10px;
+		background: #fff;
+		border-right: 1px solid #ccc;
+		border-top: 0px solid #bbb;
+		border-bottom: 0px solid #bbb;
+		margin: auto;
+		background: #FFF url(../images/subtle_dots.png) repeat;
+	}
+
+	.page_content2
+	{
+		vertical-align: top;
+		float: left;
+		width: 555px;
+		height: 600px;
+		margin-right: 1px;
+		padding: 10px;
+		background: #fff;
+		border-right: 0px solid #bbb;
+		border-top: 0px solid #bbb;
+		border-bottom: 0px solid #bbb;
+		background: #FFF url(../images/subtle_dots.png) repeat;
+	}

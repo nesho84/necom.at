@@ -1,0 +1,439 @@
+	body
+	{
+		margin:0;
+		padding:0;
+		background: #68a3ef;
+	}
+	h1, h2, h3
+	{
+		margin: 0;
+		padding: 0;
+	}
+	
+	p, ol, ul
+	{
+		margin-top: 0;
+	}
+	
+	ol, ul
+	{
+		padding: 0;
+		list-style: none;
+	}
+	
+	p
+	{
+		line-height: 180%;
+	}
+	
+	strong
+	{
+	}
+	
+	a
+	{
+		color: #0000FF;
+	}
+	
+	a:hover
+	{
+		text-decoration: none;
+	}
+	
+	@font-face
+	{
+	font-family: 'FontAwesome';
+	src: url('../fonts/fontawesome-webfont.eot?v=3.0.1');
+	src: url('../fonts/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
+	     url('../fonts/fontawesome-webfont.woff?v=3.0.1') format('woff'),
+	     url('../fonts/fontawesome-webfont.ttf?v=3.0.1') format('truetype'),
+	     url('../fonts/fontawesome-webfont.svg#FontAwesome') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+/*********************************************************************************/
+/* Social Icon Styles                                                            */
+/*********************************************************************************/
+
+	ul.contact
+	{
+		overflow:  hidden;
+		margin: 0em 0 3em 0;
+		padding-top: 1em;
+		text-align: center;
+	}
+	
+	ul.contact li
+	{
+		display: inline-block;
+		padding: 0em 0.30em;
+		font-size: 1em;
+	}
+	
+	ul.contact li span
+	{
+		display: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	ul.contact li a
+	{
+		color: #FFF;
+	}
+	
+	ul.contact li a:before
+	{
+		display: inline-block;
+		background: #fff;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		color: #3881DF;
+		border: 1px solid #6699cc;
+	}
+
+/*********************************************************************************/
+/* Button Style                                                                  */
+/*********************************************************************************/
+
+	.button
+	{
+		width: 100%;
+		padding: 1em 2em 1em 2em;
+		background: #b8b8b8;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: #FFF;
+		border-radius: 5px;
+	}
+	.button:hover
+	{
+	background: #00cc66;
+	}
+	
+		.button_right
+	{
+		width: 294px;
+		display: inline-block;
+		padding: 1em 1em 1em 1em;
+		margin-left: 450px;
+		background: #b8b8b8;
+		letter-spacing: 0.20em;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 0.90em;
+		text-align: center;
+		color: #FFF;
+		border-radius: 5px;
+	}
+	.button_right:hover
+	{
+	background: #00cc66;
+	}
+	
+	.button:before
+	{
+	}
+
+/*********************************************************************************/
+/* Page - Main Content                                                           */
+/*********************************************************************************/
+
+	#clear {
+		clear: both;
+	}
+	
+	#page-wrapper
+	{
+		width: auto;
+		margin: auto;
+		min-height: 400px;
+	}
+
+	#page-wrapper-inside
+	{
+		width: auto;
+		margin: auto;
+		min-height: 400px;
+	}
+
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+	
+	#header-wrapper
+	{
+	background: #68a3ef;
+	position: relative;
+	}
+
+	#header
+	{
+		
+	}
+
+/*********************************************************************************/
+/* Logo - necom                                                                  */
+/*********************************************************************************/
+
+	#logo
+	{
+		float:none;
+		width: auto;
+	}
+	
+	#logo img
+	{
+	
+	}
+
+/*********************************************************************************/
+/* Menu                                                                          */
+/*********************************************************************************/
+
+	#menu
+	{
+		float:none;
+		width: auto;
+	}
+	
+	#menu ul
+	{
+
+	}
+	
+	#menu li
+	{
+		border-top: 2px solid #fff;
+		padding: 20px 10px 20px 10px;
+		text-align: center;
+	}
+	
+	#menu li:hover
+	{
+		border-top: 5px solid #fff;
+	}
+	
+	#menu li a, #menu li span
+	{
+		text-transform: uppercase; 
+		text-decoration: none;
+		font-size: 120%;
+		font-weight: 900;
+		color: #fff;
+	}
+	
+	#menu a:hover
+	{
+		text-decoration: none;
+		font-weight: bold;
+	}
+
+/*********************************************************************************/
+/* First Banner                                                                        */
+/*********************************************************************************/
+	
+	#first_banner-wrapper
+	{
+		float: none;
+		width: 100%;
+		/*background: url(images/bg01.jpg) no-repeat center top;*/
+	}
+	
+	#first_banner .title
+	{
+		margin-bottom: 1em;
+		text-align: center;
+	}
+	
+	#first_banner h3
+	{
+		margin-top: 3em;
+		font-size: 1.0em;
+		font-weight: 600;
+		text-align: center;
+		color: rgba(0,0,0,.8);
+	}
+
+	#first_banner .button
+	{
+		margin-top: 1em;
+	}
+	
+	.boxA1,
+	.boxB1,
+	.boxC1
+	.boxD1
+	{	
+
+	}
+	
+	.boxA1 img, 
+	.boxB1 img,
+	.boxC1 img,
+	.boxD1 img
+	{
+		border-radius: 5px;
+	}
+	
+	.boxA1 p, 
+	.boxB1 p,
+	.boxC1 p,
+	.boxD1 p
+	{
+		color: #fff;
+		text-align: center;
+	}
+	
+/*********************************************************************************/
+/* Second Banner                                                                        */
+/*********************************************************************************/
+
+	#second_banner-wrapper
+	{
+		float: none;
+		width: auto;
+		/*background: url(images/bg01.jpg) no-repeat center top;*/
+	}
+	
+	#second_banner
+	{
+		float: none;
+		width: auto;
+		/*background: url(images/bg01.jpg) no-repeat center top;*/
+	}
+	
+	.boxA img, 
+	.boxB img,
+	.boxC img
+	{
+		width: 300px;
+		height: 300px;
+		border-radius: 5px;
+	}
+	
+	.boxA, .boxB
+	{
+		margin-bottom: 20px;
+	}
+
+
+/*********************************************************************************/
+/* Footer & Copyright                                                            */
+/*********************************************************************************/
+
+	#footer-wrapper
+	{
+		overflow: hidden;
+	}
+	#footer
+	{
+	}
+		
+	#copyright
+	{
+		overflow: hidden;
+		padding: 1em 0em;
+		border-top: 2px solid #bbb;
+	}
+	
+	#copyright p
+	{
+		letter-spacing: 0.20em;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 0.80em;
+		font-weight: 500;
+		color: #fff;
+	}
+	
+	#copyright a
+	{
+		text-decoration: none;
+		color: #fff;
+	}
+
+	#line 
+	{
+		margin-top: 1em;
+		border-top: 0.2em dotted #d8d8d8;
+		margin-left: 0.8em;
+		margin-right: 0.8em;
+	}
+	
+	.page_title 
+	{
+		float: left;
+		width: 250px;
+		height: 600px;
+		padding: 10px;
+		text-align: center;
+		border-right: 1px solid #ccc;
+		margin: auto;
+	}
+	
+	.page_title h1 
+	{
+		color: #3b5998;
+	}
+	
+	.page_content_all
+	{
+		vertical-align: middle;
+		margin: auto;
+		width: 1135px;
+		height: 800px;
+		padding: 10px;
+		background: #fff;
+		border: 0px solid #bbb;
+		background: #FFF url(../images/subtle_dots.png) repeat;
+	}
+	
+	.page_content_full
+	{
+		vertical-align: middle;
+		float: left;
+		width: 885px;
+		height: 600px;
+		padding: 10px;
+		background: #fff;
+		border-right: 0px solid #bbb;
+		border-top: 0px solid #bbb;
+		border-bottom: 0px solid #bbb;
+		margin: auto;
+		background: #FFF url(../images/subtle_dots.png) repeat;
+	}
+	
+	.page_content1
+	{
+		vertical-align: middle;
+		float: left;
+		width: 315px;
+		height: 600px;
+		padding: 10px;
+		background: #fff;
+		border-right: 1px solid #ccc;
+		border-top: 0px solid #bbb;
+		border-bottom: 0px solid #bbb;
+		margin: auto;
+		background: #FFF url(../images/subtle_dots.png) repeat;
+	}
+
+	.page_content2
+	{
+		vertical-align: top;
+		float: left;
+		width: 555px;
+		height: 600px;
+		margin-right: 1px;
+		padding: 10px;
+		background: #fff;
+		border-right: 0px solid #bbb;
+		border-top: 0px solid #bbb;
+		border-bottom: 0px solid #bbb;
+		background: #FFF url(../images/subtle_dots.png) repeat;
+	}

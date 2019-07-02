@@ -1,0 +1,11 @@
+http://en.wikipedia.org/wiki/Information_technology_management
+
+
+Definition - What does Information Technology Management (IT Management) mean?
+
+Information technology management (IT management) is the 
+process whereby all resources related to information technology 
+are managed according to an organization's priorities and needs. 
+This includes tangible resources like networking hardware, computers and people, 
+as well as intangible resources like software and data. The central aim of IT management 
+is to generate value through the use of technology. To achieve this, business strategies and technology must be aligned.
