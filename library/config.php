@@ -10,7 +10,7 @@ $siteRoot = $_SERVER['DOCUMENT_ROOT']. '/';
 $admRoot = $_SERVER['DOCUMENT_ROOT']. '/adm/';
 $upload_path = $_SERVER['DOCUMENT_ROOT']. 'upl/';
 
-define('SITE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/'); //Apsolute site path
+define('SITE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/necom.at/'); //Apsolute site path
 define('ADM_URL', SITE_URL .'adm/');
 define('UPLOAD_DIR', SITE_URL .'upl/');
 define('IMAGE_DIR', SITE_URL . 'images/');
@@ -39,5 +39,3 @@ define('STYLE_DIR', SITE_URL . 'library/');
 
 //    $_COOKIE = array_map('mysql_real_escape_string', $_COOKIE);
 // }
-
-?>
