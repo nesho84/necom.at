@@ -6,36 +6,36 @@ error_reporting(E_ALL);
 require_once 'dbconnect.php';
 
 // Variables to include and upload files
-$siteRoot = $_SERVER['DOCUMENT_ROOT']. '/';
-$admRoot = $_SERVER['DOCUMENT_ROOT']. '/adm/';
-$upload_path = $_SERVER['DOCUMENT_ROOT']. 'upl/';
+$siteRoot = $_SERVER['DOCUMENT_ROOT'] . '/';
+$admRoot = $_SERVER['DOCUMENT_ROOT'] . '/adm/';
+$upload_path = $_SERVER['DOCUMENT_ROOT'] . 'upl/';
 
-define('SITE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/necom.at/'); //Apsolute site path
-define('ADM_URL', SITE_URL .'adm/');
-define('UPLOAD_DIR', SITE_URL .'upl/');
+define('SITE_URL', 'http://localhost/necom.at/'); //Apsolute site path
+define('ADM_URL', SITE_URL . 'adm/');
+define('UPLOAD_DIR', SITE_URL . 'upl/');
 define('IMAGE_DIR', SITE_URL . 'images/');
 define('STYLE_DIR', SITE_URL . 'library/');
 
-//SECURE $_GET $_POST VARIABLES 
+//SECURE $_GET $_POST VARIABLES
 // if(!get_magic_quotes_gpc())
 // {
-//   $_GET = array_map('mysql_real_escape_string', $_GET); 
+//   $_GET = array_map('htmlspecialchars', $_GET);
 
-//   $_POST = array_map('mysql_real_escape_string', $_POST); 
+//   $_POST = array_map('htmlspecialchars', $_POST);
 
-//   $_COOKIE = array_map('mysql_real_escape_string', $_COOKIE);
+//   $_COOKIE = array_map('htmlspecialchars', $_COOKIE);
 // }
 // else
-// {  
-//    $_GET = array_map('stripslashes', $_GET); 
+// {
+//    $_GET = array_map('stripslashes', $_GET);
 
-//    $_POST = array_map('stripslashes', $_POST); 
+//    $_POST = array_map('stripslashes', $_POST);
 
 //    $_COOKIE = array_map('stripslashes', $_COOKIE);
 
-//    $_GET = array_map('mysql_real_escape_string', $_GET); 
+//    $_GET = array_map('htmlspecialchars', $_GET);
 
-//    $_POST = array_map('mysql_real_escape_string', $_POST); 
+//    $_POST = array_map('htmlspecialchars', $_POST);
 
-//    $_COOKIE = array_map('mysql_real_escape_string', $_COOKIE);
+//    $_COOKIE = array_map('htmlspecialchars', $_COOKIE);
 // }

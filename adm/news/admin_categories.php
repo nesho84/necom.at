@@ -1,6 +1,6 @@
 <?php
-require ('../library/config.php');
-require ('../template/tpl_functions.php');
+require('../library/config.php');
+require('../template/tpl_functions.php');
 
 logged_in();
 
@@ -18,20 +18,20 @@ if (isset($_GET['del_category'])) {
     $cat_id = $_GET['del_category'];
     $cat_name = $_GET['cat_name'];
 
-    $qry = mysql_query("SELECT cat_img, cat_name FROM categories WHERE cat_id='$cat_id'", $con);
+    $qry = mysqli_query("SELECT cat_img, cat_name FROM categories WHERE cat_id='$cat_id'", $con);
     if (!$qry) {
-        die("Query Failed: " . mysql_error());
+        die("Query Failed: " . mysqli_error($con));
     }
-    while ($row = mysql_fetch_array($qry)) {
+    while ($row = mysqli_fetch_array($qry)) {
         $path = 'uploads/categories/';
         $cat_img = $row['cat_img'];
         if ($row['cat_img']) {
             @unlink("$path/$cat_img");
         }
     }
-    $qry = mysql_query("DELETE FROM categories WHERE cat_id='$cat_id'", $con);
+    $qry = mysqli_query("DELETE FROM categories WHERE cat_id='$cat_id'", $con);
     if (!$qry) {
-        die("Query Failed: " . mysql_error());
+        die("Query Failed: " . mysqli_error($con));
     }
     echo '<p class="executed"><img src="../images/ok1.gif" width="40" height="25" />Category: <b>' . $cat_name . '</b> deleted Successfully</p>';
 }
@@ -55,19 +55,19 @@ if ($current_pg <= 1) {
 } else {
     $start = ($current_pg * $records_per_page) - $records_per_page;
 }
-$total_records = mysql_num_rows(mysql_query("SELECT * FROM categories", $con));
+$total_records = mysqli_num_rows(mysqli_query("SELECT * FROM categories", $con));
 if (!$total_records) {
-    die("Query Failed: " . mysql_error());
+    die("Query Failed: " . mysqli_error($con));
 }
 //echo $total_records;
 $total_pages = ceil($total_records / $records_per_page);
 //echo $total_pages;
 
-$qry = mysql_query("SELECT * FROM categories order by categories.cat_id DESC LIMIT $start,$records_per_page", $con);
+$qry = mysqli_query("SELECT * FROM categories order by categories.cat_id DESC LIMIT $start,$records_per_page", $con);
 if (!$qry) {
-    die("Query Failed: " . mysql_error());
+    die("Query Failed: " . mysqli_error($con));
 }
-$num_rows = mysql_num_rows($qry);
+$num_rows = mysqli_num_rows($qry);
 /* * *****************Pagination TOP END********************** */
 ?>
 
@@ -89,23 +89,23 @@ $num_rows = mysql_num_rows($qry);
 
 <!--Warning to User!-->
 <div style="border:1px solid #bbb; margin-right:25px; padding-left:4px; background:#f5f5f5; color:#d45031; font-weight:bold;">
-<span>Category can be edited or deleted only if none of Products are related to that Category!</span>
+    <span>Category can be edited or deleted only if none of Products are related to that Category!</span>
 </div><br />
 <?php
 echo '<table cellspacing="1" cellpadding="5" width="97%" style="border:1px solid #cfcfcf; font-size:17px;">';
 echo '<tr bgcolor="#e8e8e8">';
 echo '<th>Logo</th><th>Category Name</th><th>Action</th>';
 echo '</tr>';
-while ($row = mysql_fetch_array($qry, MYSQL_ASSOC)) {
+while ($row = mysqli_fetch_array($qry, MYSQL_ASSOC)) {
     echo '<tr bgcolor="#f8f8f8">';
     echo '<td width="75px">';
-    ?>
+?>
     <!--|||||||||||||||FancyBOX Category Image Zoom|||||||||||||||-->
     <p><a id="single_1" href="<?php echo $cat_upload_path . $row['cat_img']; ?>" title="<?php echo $row['cat_name']; ?>">
             <img style="width: 100px; height: 100px;" src="<?php echo $cat_upload_path . $row['cat_img']; ?>" alt="" />
         </a></p>
     <!--|||||||||||||||FancyBOX Category Image Zoom END|||||||||||||||-->
-    <?php
+<?php
     echo '</td>';
     echo '<td>' . $row['cat_name'] . '</td>';
     echo '<td style="text-align:center; width:190px;"><a href="add_edit_category.php?cat_id=' . $row['cat_id'] . '">edit</a> | <a href="admin_categories.php?del_category=' . $row['cat_id'] . '&cat_name=' . $row['cat_name'] . '">delete</a></td>';
