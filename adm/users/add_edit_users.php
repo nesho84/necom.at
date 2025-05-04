@@ -2,8 +2,6 @@
 require('../adm_header.php');
 ?>
 
-
-
 <style type="text/css">
     <!--
     .ed {
@@ -31,7 +29,6 @@ require('../adm_header.php');
 </style>
 
 
-
 <!------------------------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------// Add //--------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------->
@@ -42,7 +39,7 @@ if (isset($_GET['add']) == 'user') {
     <!--< Go Back button START-->
     <div class="title">
         <div style="float:left;">
-            <a href="users.php"><img style="width:48px; height:48px" src="<?php echo IMAGE_DIR; ?>adm_back.png" /></a>
+            <a href="users.php"><img style="width:48px; height:48px" src="<?php echo IMG_URL; ?>adm_back.png" /></a>
         </div>
         <h1>Add User</h1>
     </div>
@@ -68,7 +65,7 @@ if (isset($_POST['add'])) {
     $user_name = $_POST['user_name'];
 
     //Don't allow duplicate Users
-    $qry_check = mysqli_query("SELECT username FROM users where username='$user_name' ", $con);
+    $qry_check = mysqli_query($con, "SELECT username FROM users where username='$user_name' ");
     if (!$qry_check) {
         die("Query Failed: " . mysqli_error($con));
     }
@@ -85,7 +82,7 @@ if (isset($_POST['add'])) {
     $randompass = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length); //random user pass
 
 
-    $save = mysqli_query("INSERT INTO users (id, username, password) VALUES ('$str','$user_name','$randompass')");
+    $save = mysqli_query($con, "INSERT INTO users (id, username, password) VALUES ('$str','$user_name','$randompass')");
 
     if (!$save) {
         die("Query Failed: " . mysqli_error($con));
@@ -106,7 +103,7 @@ if (isset($_POST['add'])) {
 <?php
 if (isset($_GET['user_id'])) {
     $user_id = $_GET['user_id'];
-    $qry1 = mysqli_query("SELECT * FROM users WHERE id='$user_id'", $con);
+    $qry1 = mysqli_query($con, "SELECT * FROM users WHERE id='$user_id'");
     if (!$qry1) {
         die("Query Failed: " . mysqli_error($con));
     }
@@ -116,7 +113,7 @@ if (isset($_GET['user_id'])) {
         <!--< Go Back button START-->
         <div class="title">
             <div style="float:left;">
-                <a href="users.php"><img style="width:48px; height:48px" src="<?php echo IMAGE_DIR; ?>adm_back.png" /></a>
+                <a href="users.php"><img style="width:48px; height:48px" src="<?php echo IMG_URL; ?>adm_back.png" /></a>
             </div>
             <h1>Edit User</h1>
         </div>
@@ -156,7 +153,7 @@ if (isset($_POST['edit'])) {
         die('<p style="color: red; font-weight: bold; text-align: center;">Password do not match!<br /> Please try again...</p>');
     }
 
-    $save = mysqli_query("UPDATE users SET username='$user_name', password='$pass' WHERE id='$user_id'", $con);
+    $save = mysqli_query($con, "UPDATE users SET username='$user_name', password='$pass' WHERE id='$user_id'");
     if (!$save) {
         die("Query Failed: " . mysqli_error($con));
     }
@@ -170,8 +167,6 @@ if (isset($_POST['edit'])) {
     <meta http-equiv="Refresh" content="2; url=<?php echo 'http://' . $host . $uri . '/' . $extra; ?>">
 <?php
 }
-
-
 
 require('../adm_footer.php');
 ?>

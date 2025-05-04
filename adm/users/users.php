@@ -2,25 +2,24 @@
 require('../adm_header.php');
 ?>
 
-
 <!---------------***************Main Content START******************---------------------------------->
 <!--< Go Back button and +Add New button START-->
 <div class="title">
     <div style="float:left;">
-        <a href="../admin.php"><img style="width:48px; height:48px" src="<?php echo IMAGE_DIR; ?>adm_back.png" /></a>
+        <a href="../admin.php"><img style="width:48px; height:48px" src="<?php echo IMG_URL; ?>adm_back.png" /></a>
     </div>
 
     <h1>Users</h1>
 
     <div style="float:right;">
-        <a href="add_edit_users.php?add=user"><img style="width:48px; height:48px" src="<?php echo IMAGE_DIR; ?>add.png" /></a>
+        <a href="add_edit_users.php?add=user"><img style="width:48px; height:48px" src="<?php echo IMG_URL; ?>add.png" /></a>
     </div>
 </div>
 <div id="clear">&nbsp;</div>
 <!--< Go Back button and +Add New button END-->
 
 <?php
-$qry = mysqli_query("SELECT * FROM users order by users.id DESC", $con);
+$qry = mysqli_query($con, "SELECT * FROM users order by users.id DESC");
 if (!$qry) {
     die("Query Failed: " . mysqli_error($con));
 }
@@ -30,14 +29,14 @@ echo '<table cellspacing="2" cellpadding="1" width="100%" style="border:1px soli
 echo '<tr bgcolor="#e8e8e8">';
 echo '<th>UserID</th><th>Username</th><th>Password</th><th colspan="2">Action</th>';
 echo '</tr>';
-while ($row = mysqli_fetch_array($qry, MYSQL_ASSOC)) {
+while ($row = mysqli_fetch_array($qry, MYSQLI_ASSOC)) {
     echo '<tr bgcolor="#f8f8f8">';
     echo '<td>' . $row['id'] . '</td>';
     echo '<td>' . $row['username'] . '</td>';
     echo '<td>' . $row['password'] . '</td>';
 ?>
-    <td style="width:60px;"><a href="add_edit_users.php?user_id=<?php echo $row['id']; ?>" class="action"><img style="width:32px; height:32px" src="<?php echo IMAGE_DIR; ?>edit.png" /></a></td>
-    <td style="width:60px;"><a href="users.php?del_user=<?php echo $row['id']; ?>&user_name=<?php echo $row['username']; ?>" class="action" onclick="return confirm('Are you sure?');"><img style="width:32px; height:32px" src="<?php echo IMAGE_DIR; ?>delete.png" /></a></td>
+    <td style="width:60px;"><a href="add_edit_users.php?user_id=<?php echo $row['id']; ?>" class="action"><img style="width:32px; height:32px" src="<?php echo IMG_URL; ?>edit.png" /></a></td>
+    <td style="width:60px;"><a href="users.php?del_user=<?php echo $row['id']; ?>&user_name=<?php echo $row['username']; ?>" class="action" onclick="return confirm('Are you sure?');"><img style="width:32px; height:32px" src="<?php echo IMG_URL; ?>delete.png" /></a></td>
 <?php
     echo '</tr>';
 }
@@ -52,7 +51,7 @@ if (isset($_GET['del_user'])) {
     $user_id = $_GET['del_user'];
     $user_name = $_GET['user_name'];
 
-    $qry = mysqli_query("DELETE FROM users WHERE id='$user_id'", $con);
+    $qry = mysqli_query($con, "DELETE FROM users WHERE id='$user_id'");
     if (!$qry) {
         die("Query Failed: " . mysqli_error($con));
     }

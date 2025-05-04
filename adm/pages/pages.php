@@ -1,8 +1,6 @@
 <?php
-require('adm_header.php');
-
-require(($_SERVER['DOCUMENT_ROOT']) . 'fancybox/my-fancybox-js-css.php');
-
+require('../adm_header.php');
+require('../../fancybox/my-fancybox-js-css.php');
 
 /* * *****************Pagination TOP START ********************** */
 $records_per_page = 3;
@@ -16,15 +14,13 @@ if ($current_pg <= 1) {
 } else {
     $start = ($current_pg * $records_per_page) - $records_per_page;
 }
-$total_records = mysqli_num_rows(mysqli_query("SELECT * FROM pages", $con));
-if (!$total_records) {
-    die("Query Failed: " . mysqli_error($con));
-}
-//echo $total_records;
+
+$total_records = mysqli_num_rows(mysqli_query($con, "SELECT * FROM pages"));
+
 $total_pages = ceil($total_records / $records_per_page);
 //echo $total_pages;
 
-$qry = mysqli_query("SELECT * FROM pages order by pages.id DESC LIMIT $start,$records_per_page", $con);
+$qry = mysqli_query($con, "SELECT * FROM pages order by pages.id DESC LIMIT $start, $records_per_page");
 if (!$qry) {
     die("Query Failed: " . mysqli_error($con));
 }
@@ -32,21 +28,17 @@ $num_rows = mysqli_num_rows($qry);
 /* * *****************Pagination TOP END********************** */
 ?>
 
-
-
-
-
 <!---------------***************Main Content START******************---------------------------------->
 <!--< Go Back button and +Add New button START-->
 <div class="title">
     <div style="float:left;">
-        <a href="../admin.php"><img style="width:48px; height:48px" src="<?php echo IMAGE_DIR; ?>adm_back.png" /></a>
+        <a href="../admin.php"><img style="width:48px; height:48px" src="<?php echo IMG_URL; ?>adm_back.png" /></a>
     </div>
 
     <h1>Main Pages</h1>
 
     <div style="float:right;">
-        <a href="add_edit_pages.php?add=page"><img style="width:48px; height:48px" src="<?php echo IMAGE_DIR; ?>add.png" /></a>
+        <a href="add_edit_pages.php?add=page"><img style="width:48px; height:48px" src="<?php echo IMG_URL; ?>add.png" /></a>
     </div>
 </div>
 <div id="clear">&nbsp;</div>
@@ -57,7 +49,7 @@ echo '<table cellspacing="1" cellpadding="1" width="100%" style="text-align:cent
 echo '<tr bgcolor="#e8e8e8">';
 echo '<th>Image</th><th>Creation</th><th>Menu Title</th><th>link</th><th colspan="2">Action</th>';
 echo '</tr>';
-while ($row = mysqli_fetch_array($qry, MYSQL_ASSOC)) {
+while ($row = mysqli_fetch_array($qry, MYSQLI_ASSOC)) {
     echo '<tr bgcolor="#f8f8f8">';
     echo '<td width="75px">';
 ?>
@@ -72,8 +64,8 @@ while ($row = mysqli_fetch_array($qry, MYSQL_ASSOC)) {
     echo '<td>' . $row['title'] . '</td>';
     echo '<td>' . $row['link'] . '</td>';
     ?>
-    <td style="width:60px;"><a href="add_edit_pages.php?id=<?php echo $row['id']; ?>" class="action"><img style="width:32px; height:32px" src="<?php echo IMAGE_DIR; ?>edit.png" /></a></td>
-    <td style="width:60px;"><a href="pages.php?del_pages=<?php echo $row['id']; ?>&title=<?php echo $row['title']; ?>" class="action" onclick="return confirm('Are you sure?');"><img style="width:32px; height:32px" src="<?php echo IMAGE_DIR; ?>delete.png" /></a></td>
+    <td style="width:60px;"><a href="add_edit_pages.php?id=<?php echo $row['id']; ?>" class="action"><img style="width:32px; height:32px" src="<?php echo IMG_URL; ?>edit.png" /></a></td>
+    <td style="width:60px;"><a href="pages.php?del_pages=<?php echo $row['id']; ?>&title=<?php echo $row['title']; ?>" class="action" onclick="return confirm('Are you sure?');"><img style="width:32px; height:32px" src="<?php echo IMG_URL; ?>delete.png" /></a></td>
 <?php
     echo '</tr>';
 }
@@ -115,7 +107,7 @@ if ($current_pg < $total_pages) {
     echo "&nbsp;&nbsp;&nbsp;&nbsp;";
     echo "<a href=\"pages.php?pg=" . $total_pages . "\">Last</a>";
 }
-echo '<p align="center" style="color: #9c9ca7; margin-top:-14px;">Page<b> ' . $current_pg . '/' . $total_pages . '</b></p>';
+echo '<p style="color: #9c9ca7; text-align:center;">Page<b> ' . $current_pg . '/' . $total_pages . '</b></p>';
 /* * *****************Page Pagination DOWN END********************** */
 
 
@@ -127,7 +119,7 @@ if (isset($_GET['del_pages'])) {
     $id = $_GET['del_pages'];
     $title = $_GET['title'];
 
-    $qry = mysqli_query("SELECT img, title FROM pages WHERE id='$id'", $con);
+    $qry = mysqli_query($con, "SELECT img, title FROM pages WHERE id='$id'");
     if (!$qry) {
         die("Query Failed: " . mysqli_error($con));
     }
@@ -138,7 +130,7 @@ if (isset($_GET['del_pages'])) {
             @unlink("$path/$img");
         }
     }
-    $qry = mysqli_query("DELETE FROM pages WHERE id='$id'", $con);
+    $qry = mysqli_query($con, "DELETE FROM pages WHERE id='$id'");
     if (!$qry) {
         die("Query Failed: " . mysqli_error($con));
     }

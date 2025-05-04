@@ -4,7 +4,7 @@
 		<div id="header-wrapper">
 			<div id="header">
 				<div id="logo">
-					<h1><a href="http://necom.at"><img src="<?php echo SITE_URL; ?>images/new logo by nebo-header.png"></a></h1>
+					<h1><a href="<?= SITE_URL ?>"><img src="<?php echo SITE_URL; ?>images/new logo by nebo-header.png"></a></h1>
 					<!--<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Information Technology Management</p>-->
 				</div>
 				<div id="menu">

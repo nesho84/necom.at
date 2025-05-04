@@ -30,25 +30,25 @@ require('adm_header.php');
     }
     $count3 = mysqli_num_rows($qry3);
 
-    $qry5 = mysqli_query($con, "SELECT * FROM news");
-    if (!$qry5) {
+    $qry_news = mysqli_query($con, "SELECT * FROM news");
+    if (!$qry_news) {
         die("Query Failed: " . mysqli_error($con));
     }
-    $count5 = mysqli_num_rows($qry5);
+    $count_news = mysqli_num_rows($qry_news);
     ?>
 
     <li><a href="<?php ADM_URL ?>pages/pages.php">Pages</a><?php echo ' <span><b>(' . $count . ')</b></span>' ?><br />
         Display.Edit and Delete top_menu Pages</li>
 
-    <li><a href="referenzen/">Referenzen</a><?php echo ' <span><b>(' . $count2 . ')</b></span>' ?><br />
+    <li><a href="referenzen/referenzen.php">Referenzen</a><?php echo ' <span><b>(' . $count2 . ')</b></span>' ?><br />
         Display, Edit and Delete References</li>
 
     <li><a href="<?php ADM_URL ?>users/users.php">Users</a><?php echo ' <span><b>(' . $count3 . ')</b></span>' ?><br />
         Website Administrators &amp; Users with full Access</li>
 
     <li>
-        <a href="<?php ADM_URL ?>news/">News</a><br />
-        News: <?php echo '<span><b>(' . $count5 . ')</b></span>'; ?> This Option is Coming Soon...
+        <a href="<?php ADM_URL ?>news/news.php">News</a><br />
+        News: <?php echo '<span><b>(' . $count_news . ')</b></span>'; ?> This Option is Coming Soon...
     </li>
 
     <li class="active"><a href="<?php echo ADM_URL ?>logout.php">Logout</a><br />

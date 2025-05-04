@@ -3,39 +3,15 @@ ini_set('display_errors', 'On');
 error_reporting(E_ALL);
 
 //connect to database
-require_once 'dbconnect.php';
+require_once __DIR__ . '/dbconnect.php';
 
 // Variables to include and upload files
 $siteRoot = $_SERVER['DOCUMENT_ROOT'] . '/';
 $admRoot = $_SERVER['DOCUMENT_ROOT'] . '/adm/';
 $upload_path = $_SERVER['DOCUMENT_ROOT'] . 'upl/';
 
-define('SITE_URL', 'http://localhost/necom.at/'); //Apsolute site path
+define('SITE_URL', 'http://localhost/necom.at/');
 define('ADM_URL', SITE_URL . 'adm/');
 define('UPLOAD_DIR', SITE_URL . 'upl/');
-define('IMAGE_DIR', SITE_URL . 'images/');
-define('STYLE_DIR', SITE_URL . 'library/');
-
-//SECURE $_GET $_POST VARIABLES
-// if(!get_magic_quotes_gpc())
-// {
-//   $_GET = array_map('htmlspecialchars', $_GET);
-
-//   $_POST = array_map('htmlspecialchars', $_POST);
-
-//   $_COOKIE = array_map('htmlspecialchars', $_COOKIE);
-// }
-// else
-// {
-//    $_GET = array_map('stripslashes', $_GET);
-
-//    $_POST = array_map('stripslashes', $_POST);
-
-//    $_COOKIE = array_map('stripslashes', $_COOKIE);
-
-//    $_GET = array_map('htmlspecialchars', $_GET);
-
-//    $_POST = array_map('htmlspecialchars', $_POST);
-
-//    $_COOKIE = array_map('htmlspecialchars', $_COOKIE);
-// }
+define('IMG_URL', SITE_URL . 'images/');
+define('STYLE_URL', SITE_URL . 'library/');

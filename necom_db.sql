@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 04, 2025 at 01:21 AM
+-- Generation Time: May 04, 2025 at 03:22 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -39,11 +39,21 @@ CREATE TABLE `news` (
 
 CREATE TABLE `pages` (
   `id` int(11) NOT NULL,
-  `date` varchar(255) NOT NULL,
+  `img` varchar(255) NOT NULL,
   `title` varchar(255) NOT NULL,
+  `date` varchar(255) NOT NULL,
   `link` varchar(255) NOT NULL,
   `text` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `pages`
+--
+
+INSERT INTO `pages` (`id`, `img`, `title`, `date`, `link`, `text`) VALUES
+(1, 'albania.png', 'services', '2025-05-04 03:06:34', 'http://necom.at/services', '<p>Services...</p>'),
+(3, 'germany.png', 'referenzen', '2025-05-04 03:03:31', 'http://necom.at/referenzen', '<p>Referenzen...</p>'),
+(4, 'united.png', 'uns', '2025-05-04 03:05:50', 'http://necom.at/uns', '<p>&Uuml;ber Uns...</p>');
 
 -- --------------------------------------------------------
 
@@ -117,7 +127,7 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `referenzen`
@@ -129,7 +139,7 @@ ALTER TABLE `referenzen`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25595;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

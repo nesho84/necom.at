@@ -1,10 +1,7 @@
 <?php
 require('../adm_header.php');
-
-require(($_SERVER['DOCUMENT_ROOT']) . 'fancybox/my-fancybox-js-css.php');
+require('../../fancybox/my-fancybox-js-css.php');
 ?>
-
-
 
 <style type="text/css">
 	<!--
@@ -31,8 +28,6 @@ require(($_SERVER['DOCUMENT_ROOT']) . 'fancybox/my-fancybox-js-css.php');
 	}
 	-->
 </style>
-
-
 
 <!-- TinyMCE -->
 <script type="text/javascript" src="../tiny_mce/tiny_mce.js"></script>
@@ -124,7 +119,7 @@ if (isset($_GET['add']) == 'page') {
 	<!--< Go Back button START-->
 	<div class="title">
 		<div style="float: left;">
-			<a href="pages.php"><img style="width:48px; height:48px" src="<?php echo IMAGE_DIR; ?>adm_back.png" /></a>
+			<a href="pages.php"><img style="width:48px; height:48px" src="<?php echo IMG_URL; ?>adm_back.png" /></a>
 		</div>
 		<h1>Add Page</h1>
 	</div>
@@ -190,7 +185,7 @@ if (isset($_POST['add'])) {
 	$text = $_POST['text'];
 
 	//Don't allow duplicate page
-	$qry_check = mysqli_query("SELECT title FROM pages where title='$title' ", $con);
+	$qry_check = mysqli_query($con, "SELECT title FROM pages where title='$title' ");
 	if (!$qry_check) {
 		die("Query Failed: " . mysqli_error($con));
 	}
@@ -202,7 +197,7 @@ if (isset($_POST['add'])) {
 		exit;
 	}
 
-	$save = mysqli_query("INSERT INTO pages (img, title, date, link, text) VALUES ('$img','$title',NOW(),'$link','$text')");
+	$save = mysqli_query($con, "INSERT INTO pages (img, title, date, link, text) VALUES ('$img','$title',NOW(),'$link','$text')");
 
 	if (!$save) {
 		die("Query Failed: " . mysqli_error($con));
@@ -223,7 +218,7 @@ if (isset($_POST['add'])) {
 <?php
 if (isset($_GET['id'])) {
 	$id = $_GET['id'];
-	$qry1 = mysqli_query("SELECT * FROM pages WHERE id='$id'", $con);
+	$qry1 = mysqli_query($con, "SELECT * FROM pages WHERE id='$id'");
 	if (!$qry1) {
 		die("Query Failed: " . mysqli_error($con));
 	}
@@ -234,7 +229,7 @@ if (isset($_GET['id'])) {
 		<!--< Go Back button START-->
 		<div class="title">
 			<div style="float:left;">
-				<a href="pages.php"><img style="width:48px; height:48px" src="<?php echo IMAGE_DIR; ?>adm_back.png" /></a>
+				<a href="pages.php"><img style="width:48px; height:48px" src="<?php echo IMG_URL; ?>adm_back.png" /></a>
 			</div>
 			<h1>Edit Page</h1>
 		</div>
@@ -281,7 +276,7 @@ if (isset($_POST['edit'])) {
 	$text = $_POST['text'];
 	$c_date = date("Y-m-d H:i:s");
 
-	$save = mysqli_query("UPDATE pages SET title='$title', date='$c_date', link='$link', text='$text' WHERE id='$id'", $con);
+	$save = mysqli_query($con, "UPDATE pages SET title='$title', date='$c_date', link='$link', text='$text' WHERE id='$id'");
 	if (!$save) {
 		die("Query Failed: " . mysqli_error($con));
 	}
@@ -295,10 +290,6 @@ if (isset($_POST['edit'])) {
 	<meta http-equiv="Refresh" content="1; url=<?php echo 'http://' . $host . $uri . '/' . $extra; ?>">
 <?php
 }
-
-
-
-
 
 require('../adm_footer.php');
 ?>

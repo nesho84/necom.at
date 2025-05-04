@@ -33,7 +33,6 @@
 			die("Query Failed: " . mysqli_error($con));
 		}
 		while ($row = mysqli_fetch_array($qry1)) {
-
 			echo $row['text'];
 		}
 		?>
